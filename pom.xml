@@ -26,6 +26,21 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
+  <distributionManagement>
+  
+      <repository>
+        <id>nexus</id>
+        <name>project_33_nexus_release</name>
+        <url>http://3.83.52.51:8081/repository/Maven_release/</url>
+      </repository>
+      
+      <snapshotRepository>
+        <id>nexus</id>
+        <name>project_33_nexus_snapshot</name>
+        <url>http://3.83.52.51:8081/repository/Maven_snapshot/</url>
+      </snapshotRepository>
+      
+  </distributionManagement>
   <build>
     <finalName>java-tomcat-maven-example</finalName>
     <plugins>
