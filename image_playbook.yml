@@ -7,7 +7,7 @@
         cmd: apt install python2-pip -y ; pip3 install docker-py ; apt update -y
     - name: build docker image 
       docker_image:
-        path: ./Dockerfile
+        path: Dockerfile
         name: tomcat3
         tag: 1
         source: build
