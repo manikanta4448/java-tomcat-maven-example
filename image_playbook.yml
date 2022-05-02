@@ -3,7 +3,7 @@
   hosts: localhost
   tasks:
     - name: docker_login
-      ansible.built.in.shell:
+      ansible.built.inshell:
         cmd: echo $docker_login_PSW | docker login -u $docker_login_USR --password-stdin
     - name: docker-image
       docker_image:
