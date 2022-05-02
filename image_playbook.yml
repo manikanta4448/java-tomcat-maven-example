@@ -4,6 +4,9 @@
     - name: build docker image 
       community.docker.docker_image:
         path: ./Dockerfile
-        name: tomcat3:1
-        tty: false
+        name: tomcat3
+        tag: 1
+        source: build
+        push: yes
+        
         
