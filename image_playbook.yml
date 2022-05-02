@@ -3,14 +3,9 @@
   hosts: localhost
   tasks:
     - name: docker_login
-      ansible.builtin.shell:
+      ansible.builtin.shell: 
         cmd: echo $docker_login_PSW | docker login -u $docker_login_USR --password-stdin
-    - name: docker-image
-      docker_image:
-        path: ./Dockerfile
-        name: manikanta448/tomcat
-        tag: 1
-        push: yes
+        cmd: docker push manikanta448/tomcat:1
         
 - name: docker images pull
   hosts: servers
