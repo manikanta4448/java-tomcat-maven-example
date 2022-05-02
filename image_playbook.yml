@@ -3,9 +3,8 @@
   hosts: localhost
   tasks:
     - name: docker_login
-      docker_login:
-        username: manikanta448
-        password: 4bfccc70-86d3-4d76-9271-9c2b341be780
+      ansible.built.in.shell:
+        cmd: echo $docker_login_PSW | docker login -u $docker_login_USR --password-stdin
     - name: docker-image
       docker_image:
         path: ./Dockerfile
