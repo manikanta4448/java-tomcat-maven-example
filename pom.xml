@@ -15,7 +15,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <properties>
+<!--   <properties>
     <jdk.version>1.8</jdk.version>
     <spring.version>5.1.2.RELEASE</spring.version>
     <junit.version>4.11</junit.version>
@@ -40,7 +40,7 @@
         <url>http://174.129.80.87:8081/repository/Maven_Snapshot/</url>
       </snapshotRepository>
       
-  </distributionManagement>
+  </distributionManagement> -->
   <build>
     <finalName>java-tomcat-maven-example</finalName>
     <plugins>
