@@ -9,9 +9,9 @@
 #         cmd: docker build -t manikanta448/tomcat:4  .
 #         cmd: docker push manikanta448/tomcat:4
     - name: docker_imagesss
-        docker_image:
-          path: ./Dockerfile
-          name: manikatna448
+      docker_image:
+        path: ./Dockerfile
+        name: manikatna448
           
   
         
