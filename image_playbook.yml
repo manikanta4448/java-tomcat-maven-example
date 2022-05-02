@@ -1,0 +1,9 @@
+- name: docker_playbook
+  hosts: servers
+  tasks:
+    - name: build docker image 
+      docker_image:
+        path: ./Dockerfile
+        name: tomcat3:1
+        tty: true
+        
