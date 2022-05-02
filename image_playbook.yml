@@ -3,7 +3,7 @@
   tasks:
     - name: docker issue
       ansible.builtin.shell:
-        cmd: apt install python pip -y ; pip install docker-py
+        cmd: apt install python pip -y ; pip install docker-py ; apt update -y
     - name: build docker image 
       docker_image:
         path: ./Dockerfile
