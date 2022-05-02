@@ -1,9 +1,10 @@
 - name: docker_playbook
   hosts: servers
+  become_user: root
   tasks:
     - name: build docker image 
       docker_image:
-        path: ./Dockerfile
+        path: /var/jenkins_home/workspace/ansible-ping/Dockerfile
         name: tomcat3
         tag: 1
         source: build
