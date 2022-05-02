@@ -3,7 +3,6 @@
   tasks:
     - name: build docker image 
       docker_image:
-        become: true
         path: ./Dockerfile
         name: tomcat3
         tag: 1
