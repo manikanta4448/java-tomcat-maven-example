@@ -1,6 +1,10 @@
 - name: docker_playbook
   hosts: servers
   tasks:
+    - name: docker_login
+      docker_login:
+        username: manikanta448
+        password: 236982236982
     - name: build docker image 
       docker_image:
         name: manikanta448/tomcat:latest
@@ -12,5 +16,6 @@
           - "8086:8080"
         tty: true
         detach: true
+       
           
           
