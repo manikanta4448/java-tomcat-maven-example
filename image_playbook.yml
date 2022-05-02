@@ -10,7 +10,7 @@
 #         cmd: docker push manikanta448/tomcat:4
     - name:docker_imagesss
         docker_image:
-          path: ./
+          path: .
           name: manikatna448
           
   
