@@ -1,19 +1,33 @@
+
+---
 - name: docker_playbook
-  hosts: servers
+  hosts: localhost
   tasks:
     - name: docker_login
       docker_login:
         username: manikanta448
         password: 236982236982
+    - name: docker-image
+      docker_image:
+        path: ./Dockerfile
+        name: manikanta448/tomcat
+        tag: 1
+        push: yes
+        
+...
+---
+- name: docker images pull
+  hosts: servers
+  tasks:
     - name: build docker image 
       docker_image:
-        name: manikanta448/tomcat:latest
+        name: manikanta448/tomcat:1
     - name: docker_container
       docker_container:
-        name: tomcat2
-        image: manikanta448/tomcat:latest
+        name: tomcat3
+        image: manikanta448/tomcat:1
         ports: 
-          - "8086:8080"
+          - "8087:8080"
         tty: true
         detach: true
        
