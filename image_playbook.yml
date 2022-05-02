@@ -5,13 +5,7 @@
     - name: docker_login
       ansible.builtin.shell: 
         cmd: echo $docker_login_PSW | docker login -u $docker_login_USR --password-stdin
-    - name: docker_image_build
-      docker_image:
-        name: manikanta448/tomcat
-        tag: 3
-        push: yes
-        source: build
-        
+        cmd: docker build -t manikanta448/tomcat:4 .
         
 - name: docker images pull
   hosts: servers
