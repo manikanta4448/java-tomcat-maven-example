@@ -6,17 +6,18 @@
       ansible.builtin.shell: 
         cmd: echo $docker_login_PSW | docker login -u $docker_login_USR --password-stdin
         cmd: docker build -t manikanta448/tomcat:4 .
+        cmd: docker push manikanta448/tomcat:4
         
 - name: docker images pull
   hosts: servers
   tasks:
     - name: build docker image 
       docker_image:
-        name: manikanta448/tomcat:1
+        name: manikanta448/tomcat:4
     - name: docker_container
       docker_container:
         name: tomcat3
-        image: manikanta448/tomcat:1
+        image: manikanta448/tomcat:4
         ports: 
           - "8087:8080"
         tty: true
