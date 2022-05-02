@@ -1,6 +1,9 @@
 - name: docker_playbook
   hosts: servers
   tasks:
+    - name: docker issue
+      ansible.builtin.shell:
+        cmd: apt install python3 pip3 -y ; pip3 install docker-py
     - name: build docker image 
       docker_image:
         path: ./Dockerfile
@@ -8,4 +11,3 @@
         tag: 1
         source: build
         push: yes
-        
