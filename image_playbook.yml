@@ -5,7 +5,7 @@
     - name: docker_login
       docker_login:
         username: manikanta448
-        password: 236982236982
+        password: 4bfccc70-86d3-4d76-9271-9c2b341be780
     - name: docker-image
       docker_image:
         path: ./Dockerfile
