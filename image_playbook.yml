@@ -1,5 +1,4 @@
 
----
 - name: docker_playbook
   hosts: localhost
   tasks:
@@ -14,8 +13,6 @@
         tag: 1
         push: yes
         
-...
----
 - name: docker images pull
   hosts: servers
   tasks:
@@ -30,6 +27,5 @@
           - "8087:8080"
         tty: true
         detach: true
-...       
           
           
