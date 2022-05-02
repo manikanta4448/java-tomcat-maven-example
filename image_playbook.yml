@@ -1,5 +1,6 @@
 - name: docker_playbook
   hosts: servers
+  become: true
   tasks:
     - name: docker issue
       ansible.builtin.shell:
