@@ -5,5 +5,5 @@
       docker_image:
         path: ./Dockerfile
         name: tomcat3:1
-        tty: true
+        tty: false
         
