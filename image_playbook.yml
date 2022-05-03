@@ -10,8 +10,8 @@
 #         cmd: docker build -t manikanta448/tomcat:4  .
 #         cmd: docker push manikanta448/tomcat:4
     - name: dockerpy
-       pip:
-        name: docker-py
+      pip:
+       name: docker-py
     - name: docker_imagesss
       community.docker.docker_image:
        build:
