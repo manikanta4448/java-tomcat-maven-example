@@ -12,7 +12,7 @@
     - name: dockerpy
       pip:
        name: docker-py
-       status: absent
+       state: absent
     - name: docker_imagesss
       community.docker.docker_image:
        build:
