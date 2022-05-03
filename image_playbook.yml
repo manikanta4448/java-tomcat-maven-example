@@ -16,7 +16,7 @@
     - name: docker_imagesss
       community.docker.docker_image:
        build:
-        path: ./Dockerfile
+        path: Dockerfile
        name: manikanta448
        source: build
        tag: 1.2
