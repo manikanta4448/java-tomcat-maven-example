@@ -7,19 +7,19 @@
       ansible.builtin.shell: 
         cmd: echo $docker_login_PSW | docker login -u $docker_login_USR --password-stdin
         cmd: ansible localhost -m ping 
-        cmd: docker build -t manikanta448/tomcat:4  .
-        cmd: docker push manikanta448/tomcat:4
-#     - name: dockerpy
-#       pip:
-#        name: docker-py
-#        state: absent
-#     - name: docker_imagesss
-#       community.docker.docker_image:
-#        build:
-#         path: Dockerfile
-#        name: manikanta448
-#        source: build
-#        tag: 1.2
+#         cmd: docker build -t manikanta448/tomcat:4  .
+#         cmd: docker push manikanta448/tomcat:4
+    - name: dockerpy
+      pip:
+       name: docker-py
+       state: absent
+    - name: docker_imagesss
+      community.docker.docker_image:
+       build:
+        path: docker
+       name: manikanta448/tomcat
+       source: build
+       tag: 5
        
           
   
@@ -29,14 +29,14 @@
   tasks:
     - name: build docker image 
       community.docker.docker_image:
-        name: manikanta448/tomcat:4
+        name: manikanta448/tomcat:5
         source: pull
     - name: docker_container
       community.docker.docker_container:
         name: tomcat3
-        image: manikanta448/tomcat:4
+        image: manikanta448/tomcat:5
         ports: 
-          - "8087:8080"
+          - "8088:8080"
         tty: true
         detach: true
           
