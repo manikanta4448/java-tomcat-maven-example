@@ -16,7 +16,7 @@
     - name: docker_imagesss
       community.docker.docker_image:
        build:
-        path: docker
+        path: .
        name: manikanta448/tomcat
        source: build
        tag: 5
