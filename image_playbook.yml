@@ -11,8 +11,9 @@
     - name: docker_imagesss
       docker_image:
         path: ./Dockerfile
-        name: manikatna448
+        name: manikanta448
         source: build
+        tag: 1.2
           
   
         
