@@ -8,7 +8,7 @@
         cmd: echo $docker_login_PSW | docker login -u $docker_login_USR --password-stdin
         cmd: ansible localhost -m ping 
         cmd: docker build -t manikanta448/tomcat:4  .
-#         cmd: docker push manikanta448/tomcat:4
+        cmd: docker push manikanta448/tomcat:4
 #     - name: dockerpy
 #       pip:
 #        name: docker-py
