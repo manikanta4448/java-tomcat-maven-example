@@ -6,16 +6,19 @@
     - name: docker_login
       ansible.builtin.shell: 
         cmd: echo $docker_login_PSW | docker login -u $docker_login_USR --password-stdin
-        cmd: ansible localhost -m ping -e ansible_python_interpreter=/usr/local/lib/python3.9/dist-packages/ansible
-        cmd: docker build -t manikanta448/tomcat:4  .
-        cmd: docker push manikanta448/tomcat:4
-#     - name: docker_imagesss
-#       community.docker.docker_image:
-#        build:
-#         path: ./Dockerfile
-#        name: manikanta448
-#        source: build
-#        tag: 1.2
+#         cmd: ansible localhost -m ping -e ansible_python_interpreter=/usr/local/lib/python3.9/dist-packages/ansible
+#         cmd: docker build -t manikanta448/tomcat:4  .
+#         cmd: docker push manikanta448/tomcat:4
+    - name: dockerpy
+       pip:
+        name: docker-py
+    - name: docker_imagesss
+      community.docker.docker_image:
+       build:
+        path: ./Dockerfile
+       name: manikanta448
+       source: build
+       tag: 1.2
        
           
   
