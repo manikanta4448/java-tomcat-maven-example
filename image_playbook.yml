@@ -28,10 +28,10 @@
   hosts: servers
   tasks:
     - name: build docker image 
-      community.docker.docker_image:
+      docker_image:
         name: manikanta448/tomcat:4
     - name: docker_container
-      community.docker.docker_container:
+      docker_container:
         name: tomcat3
         image: manikanta448/tomcat:4
         ports: 
