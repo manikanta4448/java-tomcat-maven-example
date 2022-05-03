@@ -9,7 +9,7 @@
 #         cmd: docker build -t manikanta448/tomcat:4  .
 #         cmd: docker push manikanta448/tomcat:4
     - name: docker_imagesss
-      docker_image:
+      community.docker.docker_image:
        build:
         path: ./Dockerfile
        name: manikanta448
@@ -23,10 +23,10 @@
   hosts: servers
   tasks:
     - name: build docker image 
-      docker_image:
+      community.docker.docker_image:
         name: manikanta448/tomcat:4
     - name: docker_container
-      docker_container:
+      community.docker.docker_container:
         name: tomcat3
         image: manikanta448/tomcat:4
         ports: 
